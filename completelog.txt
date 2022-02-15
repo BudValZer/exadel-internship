@@ -1,0 +1,68 @@
+commit a20cb39f6a72c9916d4314d02327fcaec57280f5
+Merge: 8450266 4d87fdc
+Author: BudValZer <valery.budnitski@gmail.com>
+Date:   Tue Feb 15 22:51:27 2022 +0300
+
+    Merge branch 'root-new_feature'
+
+commit 8450266ee1924844b7419eeb9f9b0b173506df70
+Author: BudValZer <valery.budnitski@gmail.com>
+Date:   Tue Feb 15 22:43:49 2022 +0300
+
+    Add log.txt
+    
+    File log.txt contain "git log" output on "main" branch
+
+commit 4d87fdc76def3edfa7c0a56ad8dffaff773d2e43
+Author: BudValZer <valery.budnitski@gmail.com>
+Date:   Tue Feb 15 22:40:46 2022 +0300
+
+    Revert "Edit README.md file"
+    
+    This reverts commit ffad95da207ac83c86a301d3085ddf81e47b4468.
+
+commit ffad95da207ac83c86a301d3085ddf81e47b4468
+Author: BudValZer <valery.budnitski@gmail.com>
+Date:   Tue Feb 15 22:37:24 2022 +0300
+
+    Edit README.md file
+    
+    Added "Some additional changes" line to file README.md
+    in Task1 directory
+
+commit f27ffbfc62409b7bbc3879d536f49eae8b1b9c2d
+Author: BudValZer <valery.budnitski@gmail.com>
+Date:   Tue Feb 15 21:13:36 2022 +0300
+
+    Add gitignore
+    
+    Added .gitignore file to  to ignore all files whose name
+    begins with тАЬ.тАЭ (except .gitignore itself)
+
+commit 971f49de044de161fa74d1668a2eb1cbda3943bd
+Author: BudValZer <valery.budnitski@gmail.com>
+Date:   Tue Feb 15 21:07:40 2022 +0300
+
+    Add $env:USERNAME-new_feature branch and edit file
+    
+    New branch $env:USERNAME-new_feature was created.
+    File README.md was added with:
+    "This line was added to a file on $env:USERNAME-new_feature branch"
+
+commit 53a59e1dd14f8ca41de26d4e1fd79739f08597b2
+Author: BudValZer <valery.budnitski@gmail.com>
+Date:   Tue Feb 15 20:57:04 2022 +0300
+
+    Add dev brench and test file
+    
+    Created dev brench, created test_file.txt in Task1 directory.
+    File content is "This file was created on dev brench"
+
+commit 2d50f7fd58cf4c5f842ba4fb7d8cadf64b23aa94
+Author: BudValZer <valery.budnitski@gmail.com>
+Date:   Tue Feb 15 20:51:01 2022 +0300
+
+    Initial commit
+    
+    This commit contains "This is the main brench message" in README.md
+    file created at Task1 directory
