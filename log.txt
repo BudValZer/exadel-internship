@@ -1,0 +1,36 @@
+commit f27ffbfc62409b7bbc3879d536f49eae8b1b9c2d
+Author: BudValZer <valery.budnitski@gmail.com>
+Date:   Tue Feb 15 21:13:36 2022 +0300
+
+    Add gitignore
+    
+    Added .gitignore file to  to ignore all files whose name
+    begins with тАЬ.тАЭ (except .gitignore itself)
+
+commit 971f49de044de161fa74d1668a2eb1cbda3943bd
+Author: BudValZer <valery.budnitski@gmail.com>
+Date:   Tue Feb 15 21:07:40 2022 +0300
+
+    Add $env:USERNAME-new_feature branch and edit file
+    
+    New branch $env:USERNAME-new_feature was created.
+    File README.md was added with:
+    "This line was added to a file on $env:USERNAME-new_feature branch"
+
+commit 53a59e1dd14f8ca41de26d4e1fd79739f08597b2
+Author: BudValZer <valery.budnitski@gmail.com>
+Date:   Tue Feb 15 20:57:04 2022 +0300
+
+    Add dev brench and test file
+    
+    Created dev brench, created test_file.txt in Task1 directory.
+    File content is "This file was created on dev brench"
+
+commit 2d50f7fd58cf4c5f842ba4fb7d8cadf64b23aa94
+Author: BudValZer <valery.budnitski@gmail.com>
+Date:   Tue Feb 15 20:51:01 2022 +0300
+
+    Initial commit
+    
+    This commit contains "This is the main brench message" in README.md
+    file created at Task1 directory
