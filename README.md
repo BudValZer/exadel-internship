@@ -1,1 +1,1 @@
-# This is a global reamde file to whole repo
+# This is a global readme file to whole repo
