@@ -1,0 +1,55 @@
+name: exadel-extra
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+# This variables can be called from any step of any job
+env:
+  DEPLOY_VER: ${{ github.sha }}
+  YEAR: 1453
+
+jobs:
+  first_job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Print the list of files/directories repo
+        run: ls -la
+
+      - name: Print content of (complete)log.txt file
+        run: cat completelog.txt
+
+      - name: Print hello
+        run: echo "Hello from ${{ env.DEPLOY_VER }} commit"
+
+  second_job:
+    runs-on: ubuntu-latest
+    needs: [first_job]
+
+    # These variables can be called only within "second_job" job
+    env:
+      MONTH: "May"
+      DAY_OF_THE_MONTH: 29
+    
+    steps:
+      - name: Print favorite day of week
+        # These variable only accessible within this current step
+        env: 
+          FAVORITE_DAY_OF_WEEK: "Saturday"
+        run: echo "My favorite day of week is $FAVORITE_DAY_OF_WEEK"
+
+      - name: Print some dates
+        run: |
+          echo "System date and time: $date"
+          echo "Day - ${{ env.DAY_OF_THE_MONTH }}
+          Month - ${{ env.MONTH }}
+          Year - ${{ env.YEAR }}
+          that day Constantinople fell"
+          echo "My favorite day of week is ${{ env.FAVORITE_DAY_OF_WEEK }}"
+          echo "My favorite day of week once more is $FAVORITE_DAY_OF_WEEK"
+        # No matter how hard we try to call FAVORITE_DAY_OF_WEEK variable - it is local to the other step
+        # so it`s kinda "secret" to all other steps or jobs
