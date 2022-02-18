@@ -7,3 +7,8 @@ Task1 was about learn using Git and Github:
     - pushing changes to GitHub from local repo
     - learning to understand git status and git logs
     - additional learning GitHub Actions basics
+
+Task2 was about learning cloud services:
+    - creating, stoping, restarting, terminating instances
+    - learning how security groups works
+    - learning VPC and VPC peering configuration

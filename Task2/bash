@@ -1,0 +1,10 @@
+#!/bin/bash
+apt update
+apt install nginx -y
+echo "<br>hello, world!
+OS version is:<br>" > /var/www/html/*.html
+lsb_release -a >> /var/www/html/*.html
+echo "<br>Disk usage is:<br>" >> /var/www/html/*.html
+df -h | grep "root" >> /var/www/html/*.html
+echo "<br>running processes are:<br>" >> /var/www/html/*.html
+ps aux >> /var/www/html/*.html
