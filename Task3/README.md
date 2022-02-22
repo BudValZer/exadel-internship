@@ -1,5 +1,5 @@
 # This task was done using terraform 1.1.4
-
+# AWS credentials and AWS region are stored in terraform cloud
 # This file will mention tasks, the solution of which is not obvious or require some notes
 
 # Step 1:Create EC2 Instance t2.micro
