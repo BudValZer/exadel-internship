@@ -22,8 +22,8 @@ amzn2 distros are located in AWS S3 buckets in all regions. To enable access to 
 To finish this task, I`ve swiched private host OS to Ubuntu-20.04 as an example.
 Here are some steps that can be done to install nginx on Private instance without internet access:<br>
 1. In User Data for private instance added tiny script that will allow apt use http and https proxy;
-2. Directory "ubuntu" and it`s content must be copied to Bastion host (for example using cat);
-3. We need to ssh to the Bastion instance using it`s public IP address;
+2. Directory "ubuntu" and it&#39;s content must be copied to Bastion host (for example using cat);
+3. We need to ssh to the Bastion instance using it&#39;s public IP address;
 4. While on Bastion, we need to edit public_script.sh (enter private instance private IP address - PIPIPA) and make this file executable (chmod +x);
 5. Run public.script.sh and lean back while it doing all need actions :)
 6. (optional) Run simple GET request from Bastion to Private to chect if everything is ok (for example, run curl PIPIPA).
