@@ -10,14 +10,14 @@ There is no CentOS releases in AWS that can fit into Free Tier usage, Amazon Lin
 
 # Step 5: On EC2 Ubuntu install Docker, installation should be done according to the recommendation of the official Docker manuals 
 
-Docs https://docs.docker.com/engine/install/ubuntu/ used for syntax, docker installation was complete due to instance initialization using User Data
+<a href="https://docs.docker.com/engine/install/ubuntu/">Docs</a> used for syntax, docker installation was complete due to instance initialization using User Data
 
 # Step 7: EC2 CentOS should have outgoing and incoming access: ICMP, TCP/22, TCP/80, TCP/443, only to EC2 Ubuntu. 
 # Step 8: On EC2 CentOS install nginx (note. Remember about step 7, the task can be done in any way, it is not necessary to use terraform)
 # - Create a web page with the text “Hello World”. This page must be visible from the  EC2 Ubuntu.
 
 Step 7 can be done on amzn2 without any problem, but step 8 is literally impossible.
-According to Amazon documentation https://aws.amazon.com/ru/premiumsupport/knowledge-center/ec2-al1-al2-update-yum-without-internet/,
+According to Amazon <a href="https://aws.amazon.com/ru/premiumsupport/knowledge-center/ec2-al1-al2-update-yum-without-internet/">documentation</a>,
 amzn2 distros are located in AWS S3 buckets in all regions. To enable access to repos, amzn2 should have some additional outbound rules in it`s security group.
 To finish this task, I`ve swiched private host OS to Ubuntu-20.04 as an example.
 Here are some steps that can be done to install nginx on Private instance without internet access:<br>
