@@ -14,7 +14,7 @@ RUN apt update && \
     apt clean -y && \
     rm /var/www/html/* && \
     rm /etc/nginx/sites-enabled/* && \
-    mkdir /docker-entrypoint.d && \
+    mkdir -p /docker-entrypoint.d && \
     chmod +x /docker-entrypoint.sh && \
     chmod +x /docker-entrypoint.d/20-envsubst-on-templates.sh
 
