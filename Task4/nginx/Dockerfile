@@ -2,6 +2,8 @@ FROM ubuntu:latest
 
 LABEL Name="nginx" org.opencontainers.image.authors="BudValZer"
 
+ENV DEVOPS="#"
+
 SHELL ["/bin/bash", "-c"]
 RUN apt update && \
     apt install nginx gettext-base -y && \
