@@ -20,10 +20,10 @@ on every restart. `docker-entrypoint.sh` and `20-envsubst-on-templates.sh` scrip
 #	EXTRA 5.1. Use env files to configure each service.
 
 To run 5 nodes of the first image we can simply do `docker compose up -d --scale nginx=5`. Alternatively, we can make some changes to
-docker-compose.yml file and use replicas like so:
-`deploy:
-    mode: replicated
-    replicas: 5`
+docker-compose.yml file and use replicas like so:<br>
+`deploy:<br>
+    mode: replicated<br>
+    replicas: 5`<br>
 This aproach is less flexible than `--scale` key and need some additional instructions to run correctly (by default, compose ignores
 "deploy" section, so we need to use `docker compose --compatibility up`).
 
