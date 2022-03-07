@@ -4,6 +4,9 @@ LABEL Name="nginx" org.opencontainers.image.authors="BudValZer"
 
 ENV DEVOPS="#"
 
+COPY docker-entrypoint.sh /
+COPY 20-envsubst-on-templates.sh /docker-entrypoint.d
+
 SHELL ["/bin/bash", "-c"]
 RUN apt update && \
     apt install nginx gettext-base -y && \
@@ -11,13 +14,12 @@ RUN apt update && \
     apt clean -y && \
     rm /var/www/html/* && \
     rm /etc/nginx/sites-enabled/* && \
-    mkdir /docker-entrypoint.d
+    mkdir /docker-entrypoint.d && \
+    chmod +x /docker-entrypoint.sh && \
+    chmod +x /docker-entrypoint.d/20-envsubst-on-templates.sh
 
 COPY index.html /var/www/html/
 COPY default.conf.template /etc/nginx/templates/
-
-COPY docker-entrypoint.sh /
-COPY 20-envsubst-on-templates.sh /docker-entrypoint.d
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
