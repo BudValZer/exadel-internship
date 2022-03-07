@@ -6,7 +6,7 @@
 # EXTRA 3.2.1. Print environment variable with the value on a web page
 # (if environment variable changed after container restart - the web page must be updated with a new value)
 
-For extra step of this task I`ve been using <a href="http://nginx.org/en/docs/http/ngx_http_ssi_module.html">ngx_http_ssi_module</a> module
+For extra step of this task I\`ve been using <a href="http://nginx.org/en/docs/http/ngx_http_ssi_module.html">ngx_http_ssi_module</a> module
 which process SSI (Server Side Includes) commands in responses passing through it. This module allows us to
 access a variable directly from .html file using `<!--# command parameter1=value1 parameter2=value2 ... -->` syntax.
 I also used `envsubst` to parse .template files in nginx to allow webserver catch new environment variable
