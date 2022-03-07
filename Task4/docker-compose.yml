@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  nginx:
+    build: "./nginx"
+    ports:
+      - 0:80
+    env_file:
+      - webserver.env
+
+  petclinic:
+    build: "./spring-petclinic"
+    depends_on:
+      - postgres
+      - mysql
+    ports:
+      - 8080:8080
+
+  postgres:
+    image: postgres:14.1
+    expose:
+      - 5432
+    env_file:
+      - postgres.env
+
+  mysql:
+    image: mysql:5.7
+    expose:
+      - 3306
+    env_file:
+      - mysql.env
+    volumes:
+      - "./conf.d:/etc/mysql/conf.d:ro"

@@ -18,3 +18,8 @@ Task3 was about learning IaaC using Terraform as an example:
     - managing access to instances using security groups
     - learning to preinstall software on hosts using user data by terraform
     - additional learning how to use ssh reverse tunneling and port forwarding
+
+Task4 was about learning containers using Docker:
+    - running, stopping, removing containers
+    - creating docker images using Dockerfile
+    - defining and running multi-container Docker applications using compose
