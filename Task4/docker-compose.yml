@@ -7,6 +7,9 @@ services:
       - 0:80
     env_file:
       - webserver.env
+    deploy:
+      mode: replicated
+      replicas: 6
 
   petclinic:
     build: "./spring-petclinic"
