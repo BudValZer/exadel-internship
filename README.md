@@ -23,3 +23,8 @@ Task4 was about learning containers using Docker:
     - running, stopping, removing containers
     - creating docker images using Dockerfile
     - defining and running multi-container Docker applications using compose
+
+Task5 was about learning IaaC using Ansible
+    - remote executing commands
+    - using playbooks to describe system configuration and automate
+    installing and configuring software

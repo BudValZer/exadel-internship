@@ -1,0 +1,8 @@
+---
+- name: Install docker and run project
+  hosts: aws_region_eu_central_1
+  become: yes
+
+  roles:
+    - install_docker
+    - deploy_lemp

@@ -1,0 +1,11 @@
+plugin: aws_ec2
+regions: eu-central-1
+filters:
+  tag:ENV:
+    STAGING
+strict: False
+keyed_groups:
+  - prefix: tag
+    key: tags
+  - key: placement.region
+    prefix: aws_region

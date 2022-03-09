@@ -1,0 +1,19 @@
+---
+- name: Copy project
+  copy:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    owner: ubuntu
+    group: ubuntu
+    mode: "{{ item.mode }}"
+  with_items:
+    - { src: db.env, dest: /home/ubuntu/project/, mode: 0664 }
+    - { src: docker-compose.yml, dest: /home/ubuntu/project/, mode: 0664 }
+    - { src: Dockerfile, dest: /home/ubuntu/project/php/, mode: 0664 }
+    - { src: index.php, dest: /home/ubuntu/project/html/, mode: 0664 }
+    - { src: nginx.conf, dest: /home/ubuntu/project/conf.d/, mode: 0664 }
+
+- name: Deploy LEMP stack
+  shell:
+    cmd: "docker-compose up -d"
+    chdir: /home/ubuntu/project/
