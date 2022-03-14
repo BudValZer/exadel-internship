@@ -14,7 +14,7 @@ Task2 was about learning cloud services:
     - learning VPC and VPC peering configuration
 
 Task3 was about learning IaaC using Terraform as an example:
-    - creating instances, VPC`s, network interfaces and many more AWS resources
+    - creating instances, VPC\`s, network interfaces and many more AWS resources
     - managing access to instances using security groups
     - learning to preinstall software on hosts using user data by terraform
     - additional learning how to use ssh reverse tunneling and port forwarding
