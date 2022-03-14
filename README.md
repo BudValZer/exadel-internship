@@ -28,3 +28,5 @@ Task5 was about learning IaaC using Ansible
     - remote executing commands
     - using playbooks to describe system configuration and automate
     installing and configuring software
+
+Task6 was about learning CI\CD pipelines using Jenkins
