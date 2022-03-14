@@ -30,4 +30,3 @@ Task5 was about learning IaaC using Ansible
     installing and configuring software
 
 Task6 was about learning CI\CD pipelines using Jenkins
-    - run...

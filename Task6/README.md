@@ -17,3 +17,7 @@ To make this task more convenient, another <a href="https://github.com/BudValZer
 # 7. Pass  variable PASSWORD=QWERTY! To the docker container. Variable must be encrypted!!!
 
 This step was also made in the before-mentioned project, variable `SECRET` is stored in ansible credentials as `Secret text`
+
+# 4. Configure integration between Jenkins and your Git repo. Jenkins project must be started automatically if you push or merge to master, you also must see Jenkins last build status(success/unsuccess) in your Git repo.
+
+The webhook for this step was also done on alternative repo.
