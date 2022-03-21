@@ -1,0 +1,15 @@
+---
+- name: Update config
+  shell:
+    cmd: printf "\nUserParameter=docker_status, docker ps -a" >> /etc/zabbix/zabbix_agentd.conf
+
+- name: Add remote "zabbix" user to "docker" group
+  user:
+    name: "zabbix"
+    groups: "docker"
+    append: yes
+
+- name: Restart zabbix-agent
+  service:
+    name: zabbix-agent
+    state: restarted

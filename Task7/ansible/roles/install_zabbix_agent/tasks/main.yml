@@ -1,0 +1,33 @@
+---
+- name: Install nessecery packages
+  apt:
+    name:
+      - wget
+      - dpkg
+    state: latest
+    update_cache: yes
+
+- name: Download package
+  apt:
+    deb: https://repo.zabbix.com/zabbix/6.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_6.0-1+ubuntu20.04_all.deb
+    update_cache: yes
+
+- name: Install zabbix-agent
+  apt:
+    name: zabbix-agent
+    state: latest
+    update_cache: yes
+  notify: Start zabbix-agent on boot
+
+- name: Copy config
+  copy:
+    src: zabbix_agentd.conf
+    dest: /etc/zabbix/zabbix_agentd.conf
+    owner: root
+    group: root
+    mode: 644
+
+- name: Restart zabbix-agent
+  service:
+    name: zabbix-agent
+    state: restarted

@@ -1,0 +1,6 @@
+---
+- name: Start zabbix-agent on boot 
+  service:
+    name: zabbix-agent
+    state: started
+    enabled: yes

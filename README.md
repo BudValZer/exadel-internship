@@ -30,3 +30,5 @@ Task5 was about learning IaaC using Ansible
     installing and configuring software
 
 Task6 was about learning CI\CD pipelines using Jenkins
+
+Task7 was about learning logging and monitoring with Zabbix, ELK stack,Grafana integrated with existing ELK
